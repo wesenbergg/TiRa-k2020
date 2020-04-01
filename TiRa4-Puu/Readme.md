@@ -1,1 +1,1 @@
-![TiRa teht 4](link-to-image)
+![TiRa teht 4](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa4-Puu/src/TiRa4.png)
