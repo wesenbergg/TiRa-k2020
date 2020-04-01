@@ -1,0 +1,1 @@
+![TiRa teht 4](link-to-image)
