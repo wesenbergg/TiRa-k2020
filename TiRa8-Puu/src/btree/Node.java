@@ -23,6 +23,9 @@ public class Node {
 	public BinaryTree right() {
 		return right;
 	}
+	public void setData(String data) {
+		this.data = data;
+	}
 	public void setLeft(BinaryTree tree) {
 		left = tree;
 	}

@@ -8,7 +8,7 @@ public class Menu {
 		String data;
 		
 		do {
-			System.out.println("\n1. Lisää avain.\n2. Etsi avaimella.\n3. Käy puu läpi esijärjestyksessä.\n4. lopetus");
+			System.out.println("\n1. Lisää avain.\n2. Etsi avaimella.\n3. Käy puu läpi esijärjestyksessä.\n4. Poista avaimella.\n5. lopetus");
 			
 			select = Lue.merkki();
 			switch (select) {
@@ -24,7 +24,14 @@ public class Menu {
 				break;
 			case '3':
 				tree.preOrder();
+				break;
+			case '4':
+				System.out.println("Anna poistettava avain (merkkijono)");
+				data = Lue.rivi();
+				tree.deleteNode(data);
+				System.out.println("Puu avaimen poiston jälkeen:");
+				tree.preOrder();
 			}
-		} while(select != '4');
+		} while(select != '5');
 	}
 }

@@ -39,6 +39,35 @@ public class BinaryTree {
 		
 		return null;
 	}
+	
+	public BinaryTree findLeftMost() { //Etsii vasemman puoleisimman silmukan
+		return (root.left() != null) ? root.left().findLeftMost(): this;
+	}
+	
+	public void deleteNode(String aData) {//TODO: .getRoot().left() => .getLeft()
+		BinaryTree foundTree = find(aData);
+		if(foundTree == null) return; //TAPAUS 1: Etsittävä ei löydy
+		
+		if(foundTree.getLeft() == null && foundTree.getRight() == null) {
+			foundTree.setRoot(null); //2. Silmukka on lehti silmukka
+			return;
+		}
+
+		if((foundTree.getLeft() != null)^(foundTree.getRight() != null)) { //TAPAUS 3: Silmukalla on joko oikea tai vasen lapsisilmukka
+			if(foundTree.getLeft() != null) foundTree.setRoot(foundTree.getLeft().getRoot());
+			
+			if(foundTree.getRight() != null) foundTree.setRoot(foundTree.getRight().getRoot()); //Asetetaan lapsisilmukka silmukan tilalle
+			return; // välttämätön jotta ei siirryttäisi seuraavaan if lohkoon
+		}
+		
+		if((foundTree.getLeft() != null)&&(foundTree.getRight() != null)) { //TAPAUS 4: Silmukalla on oikea JA vasen lapsi silmukka
+			BinaryTree rightMostChild = foundTree.getRight().findLeftMost(); //Etsii vasemmasta silmukasta oikeapuoleisimman lehtisilmukan
+			foundTree.setData(rightMostChild.getData());
+			rightMostChild.setRoot(null);
+			return;
+		}
+	}
+	
 	public void preOrder() {
 		if (root == null) return;
 		System.out.println(root.getData()+',');
@@ -46,10 +75,28 @@ public class BinaryTree {
 		if (root.right() != null) 	root.right().preOrder();
 	}
 	
+	public Node getRoot() {
+		return root;
+	}
+	public String getData() {
+		return root.getData();
+	}
+	public BinaryTree getRight() {
+		return root.right();
+	}
+	public BinaryTree getLeft() {
+		return root.left();
+	}
+	
+	public void setRoot(Node root) {
+		this.root = root;
+	}
+	public void setData(String data) {
+		root.setData(data);
+	}
 	public void setLeft(BinaryTree tree) {
 		root.setLeft(tree);
 	}
-	
 	public void setRight(BinaryTree tree) {
 		root.setRight(tree);
 	}
