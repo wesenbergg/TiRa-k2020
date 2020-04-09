@@ -68,6 +68,35 @@ public class BinaryTree {
 		}
 	}
 	
+	public int laskeKorkeus() {
+		int v = 0, o = 0;
+		
+		if(root.left() != null) v = laskeKorkeus(v);
+		if(root.right() != null) o = laskeKorkeus(o);
+		
+		return (v >= o) ? v: o;
+	}
+	
+	public int laskeKorkeus(String data) {
+		int v = 0, o = 0;
+		BinaryTree foundTree = find(data);
+		
+		if(foundTree == null) return -1;
+		if(foundTree.getLeft() != null) v = foundTree.laskeKorkeus(v);
+		if(foundTree.getRight() != null) o = foundTree.laskeKorkeus(o);
+		
+		return (v >= o) ? v: o;
+	}
+	
+	public int laskeKorkeus(int korkeus) {
+		int v = korkeus, o = korkeus;
+
+		if(root.left() != null) v = root.left().laskeKorkeus(++v);
+		if(root.right() != null) o = root.right().laskeKorkeus(++o);
+		
+		return (v >= o) ? v: o;
+	}
+	
 	public void preOrder() {
 		if (root == null) return;
 		System.out.println(root.getData()+',');

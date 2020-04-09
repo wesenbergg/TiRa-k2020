@@ -8,7 +8,7 @@ public class Menu {
 		String data;
 		
 		do {
-			System.out.println("\n1. Lisää avain.\n2. Etsi avaimella.\n3. Käy puu läpi esijärjestyksessä.\n4. Poista avaimella.\n5. lopetus");
+			System.out.println("\n1. Lisää avain.\n2. Etsi avaimella.\n3. Käy puu läpi esijärjestyksessä.\n4. Poista avaimella.\n5. Laske korkeus.\n6. Laske korkeus avaimella.\n7. lopetus");
 			
 			select = Lue.merkki();
 			switch (select) {
@@ -31,7 +31,16 @@ public class Menu {
 				tree.deleteNode(data);
 				System.out.println("Puu avaimen poiston jälkeen:");
 				tree.preOrder();
+				break;
+			case '5':
+				System.out.println("Korkeus: " + tree.laskeKorkeus());
+				break;
+			case '6':
+				System.out.println("Anna silmukan avain (merkkijono)");
+				data = Lue.rivi();
+				System.out.println("Korkeus: " + tree.laskeKorkeus(data));
+				break;
 			}
-		} while(select != '5');
+		} while(select != '7');
 	}
 }

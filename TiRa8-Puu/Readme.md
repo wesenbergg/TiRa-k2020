@@ -5,3 +5,7 @@
 
 ## TiRa 9
 ![kuva2](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa8-Puu/SolmunPoisto.PNG)
+
+## TiRa 10
+![kuva3](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa8-Puu/puuKorkeus.PNG)
+![kuva3](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa8-Puu/puuKorkeusTulostus.PNG)
