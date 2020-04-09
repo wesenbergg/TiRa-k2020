@@ -8,4 +8,4 @@
 
 ## TiRa 10
 ![kuva3](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa8-Puu/puuKorkeus.PNG)
-![kuva3](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa8-Puu/puuKorkeusTulostus.PNG)
+![kuva4](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa8-Puu/puuKorkeusTulostus.PNG)
