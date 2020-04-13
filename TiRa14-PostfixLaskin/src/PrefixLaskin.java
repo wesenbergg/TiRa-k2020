@@ -40,18 +40,19 @@ public class PrefixLaskin {
                         default:
                             break;
                     }
+                    System.out.println("Operaattori '" + str + "'\nPinosta poistetut: " + vasen + " ja " + oikea + ". Tilalle lisätty " + tulos); //Pinon päivitys tulostus
                     pino.push(tulos);
                     break;
                 default:
                     try {
-                    	double luku = Double.parseDouble(str);
-                    	pino.push(luku);
+                    	pino.push(Double.parseDouble(str));
+                    	System.out.println("Pinoon lisätty luku: " + str); //Pinon päivitys tulostus
                     }catch(Exception e) {System.out.println(str + " is not a number."); }
                     break;  
             }
         }
         
         return pino.pop();	//Palautetaan pinon päällimmäinen luku esimerkiksi syötteellä "8 10 2 3 5 4 + *" pinon lopputulos on "8 10 2 27".
-        					//Jämä luvut jää lillumaan eteen.
+        					//Jämä luvut jää lillumaan, koska ne ovat ns virhesyöttöä.
     }
 }
