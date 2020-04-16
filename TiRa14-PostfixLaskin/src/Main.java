@@ -10,7 +10,7 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
     	Scanner lukija = new Scanner(System.in);
-    	PrefixLaskin laskin = new PrefixLaskin();
+    	PostfixLaskin laskin = new PostfixLaskin();
     	String syote;
         String[] strArr;
 

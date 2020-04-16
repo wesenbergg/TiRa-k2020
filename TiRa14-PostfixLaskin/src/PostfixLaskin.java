@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class PrefixLaskin {
+public class PostfixLaskin {
 	
 	public double calculate(String[] strArr) {
         Stack<Double> pino = new Stack<Double>();
@@ -20,7 +20,7 @@ public class PrefixLaskin {
                     double tulos = 0;
                     switch(str) {
                         case "+":
-                            tulos = vasen + oikea;
+                        	tulos = vasen + oikea;
                             break;
                         case "-":
                             tulos = vasen - oikea;
