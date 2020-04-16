@@ -22,6 +22,8 @@ public class Main {
         	strArr = syote.split(" ");
         	System.out.println(laskin.calculate(strArr));
         }
+        
+        lukija.close();
     }
 
     
