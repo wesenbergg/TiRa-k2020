@@ -17,7 +17,7 @@ public class BinaryTree {
 	
 	public void insert(String aData){
 		if(root == null) root = new Node(aData);
-		
+			
 		if(aData.compareTo(root.getData()) < 0) {
 			if(root.left() == null) 	root.setLeft(new BinaryTree(aData));
 			else 						root.left().insert(aData);
