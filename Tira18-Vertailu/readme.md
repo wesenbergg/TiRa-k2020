@@ -6,9 +6,9 @@ Testissä käytettiin miljoona alkioista taulukkoa. Tulosteessa näkyvä aika on
 Oma puu sijoitti alkiot puuhun noin 1,8 sekunnissa.
 
 ## Benchmark JCAPI TreeSetille
-![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/Tira18-TreeSet/tira18-treeset.PNG)
+![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/Tira18-Vertailu/tira18-treeset.PNG)
 TreeSet asetti alkiot puuhun noin 0,8 sekunnissa.
 
 ## Ei duplikaatteja
-![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/Tira18-TreeSet/tira18-insert.PNG)
+![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/Tira18-Vertailu/tira18-insert.PNG)
 Syötettyä dataa verrataan puun dataan. Jos data on duplikaatti niin `compareTo` metodi palauttaa 0, silloin ohjelma ei mene kumpaakaan if-silmukkaan ja rekursio katkeaa.
