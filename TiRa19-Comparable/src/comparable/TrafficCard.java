@@ -30,9 +30,6 @@ public class TrafficCard implements Comparable {
 	@Override
 	public int compareTo(Object o) {
 		TrafficCard card = (TrafficCard) o;
-		
-		//return this.mOwnerName.compareTo(card.mOwnerName);
-		//return (int) (card.mBalance - this.mBalance);
 		return this.mTravellerNumber - card.mTravellerNumber;
 	}
 }

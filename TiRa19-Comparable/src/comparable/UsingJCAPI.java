@@ -31,7 +31,12 @@ public class UsingJCAPI {
             cardUsers.add(myCard);
         }
         
-        ArrayList<TrafficCard> sortedCardUsers = (ArrayList<TrafficCard>) cardUsers.stream().sorted().collect(Collectors.toList());
+        //Tehtävä 21: virtojen käyttö
+        //List<TrafficCard> sortedCardUsers = cardUsers.stream().sorted().collect(Collectors.toList());
+        
+        //Tehtävä 20: Comparatorin käyttö
+        Collections.sort(cardUsers, new NameComparator());
+        ArrayList<TrafficCard> sortedCardUsers = cardUsers;
         
         Iterator itr = sortedCardUsers.iterator();
         while (itr.hasNext()) {
