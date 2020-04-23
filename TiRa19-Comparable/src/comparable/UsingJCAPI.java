@@ -32,11 +32,11 @@ public class UsingJCAPI {
         }
         
         //Tehtävä 21: virtojen käyttö
-        //List<TrafficCard> sortedCardUsers = cardUsers.stream().sorted().collect(Collectors.toList());
+        List<TrafficCard> sortedCardUsers = cardUsers.stream().sorted((o1, o2) -> (int) (o1.mBalance - o2.mBalance)).collect(Collectors.toList());
         
         //Tehtävä 20: Comparatorin käyttö
-        Collections.sort(cardUsers, new NameComparator());
-        ArrayList<TrafficCard> sortedCardUsers = cardUsers;
+        //Collections.sort(cardUsers, new NameComparator());
+        //ArrayList<TrafficCard> sortedCardUsers = cardUsers;
         
         Iterator itr = sortedCardUsers.iterator();
         while (itr.hasNext()) {

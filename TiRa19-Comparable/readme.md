@@ -17,8 +17,12 @@ Listan alkioita verrataan ajonumeron perusteella pienemmästä suurimpaan. Verta
 
 ## BalanceComparator
 ![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa19-Comparable/tira20-balance.PNG)\
-Järjestetty balancen mukaan.
+Järjestetty balancen mukaan (suurimmasta pienempään).
 
 ## NameComparator
 ![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa19-Comparable/tira20-name.PNG)\
 Järjestetty nimen mukaan
+
+# TiRa 21 Lambda
+![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa19-Comparable/tira21.PNG)\
+Järjestetty lambda lausekkeella balancen mukaan (pienimmästä suurimpaan).
