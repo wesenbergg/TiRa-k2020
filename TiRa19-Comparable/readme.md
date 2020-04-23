@@ -14,8 +14,11 @@ Järjestää listan.
 Listan alkioita verrataan ajonumeron perusteella pienemmästä suurimpaan. Vertailu voidaan toteuttaa myös Stringeillä, float ja double arvoilla.
 
 # TiRa 20 Comparator
+
+## BalanceComparator
 ![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa19-Comparable/tira20-balance.PNG)\
 Järjestetty balancen mukaan.
 
+## NameComparator
 ![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa19-Comparable/tira20-name.PNG)\
 Järjestetty nimen mukaan
