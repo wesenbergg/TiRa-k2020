@@ -23,6 +23,6 @@ Järjestetty balancen mukaan (suurimmasta pienempään).
 ![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa19-Comparable/tira20-name.PNG)\
 Järjestetty nimen mukaan
 
-# TiRa 21 Lambda
+# TiRa 21 Lambda & TiRa 22 Stream
 ![kuva1](https://raw.githubusercontent.com/wesenbergg/TiRa-k2020/master/TiRa19-Comparable/tira21.PNG)\
 Järjestetty lambda lausekkeella balancen mukaan (pienimmästä suurimpaan).
