@@ -1,13 +1,27 @@
 
 package btree;
 
+/**
+ * 
+ * @author null
+ *
+ */
 public class BinaryTree {
 	
+	/**
+	 *  
+	 */
 	private Node root;
 	
+	/**
+	 * 
+	 * @param rootValue
+	 */
 	public BinaryTree(String rootValue) {
 		root = new Node(rootValue);
 	}
+	
+	
 	public BinaryTree(){
 		root = null;
 	}
@@ -19,12 +33,12 @@ public class BinaryTree {
 		if(root == null) root = new Node(aData);
 			
 		if(aData.compareTo(root.getData()) < 0) {
-			if(root.left() == null) 	root.setLeft(new BinaryTree(aData));
-			else 						root.left().insert(aData);
+			if(root.getLeft() == null) 	root.setLeft(new BinaryTree(aData));
+			else 						root.getLeft().insert(aData);
 		}
 		if(aData.compareTo(root.getData()) > 0) {
-			if(root.right() == null) 	root.setRight(new BinaryTree(aData));
-			else 						root.right().insert(aData);
+			if(root.getRight() == null) 	root.setRight(new BinaryTree(aData));
+			else 						root.getRight().insert(aData);
 		}
 	}
 	
@@ -32,16 +46,16 @@ public class BinaryTree {
 		if(root == null) return null;
 		if(aData.compareTo(root.getData()) == 0) return this;
 		
-		if(aData.compareTo(root.getData()) < 0 && root.left() != null)
-			return root.left().find(aData);
-		if(aData.compareTo(root.getData()) > 0 && root.right() != null)
-			return root.right().find(aData);
+		if(aData.compareTo(root.getData()) < 0 && root.getLeft() != null)
+			return root.getLeft().find(aData);
+		if(aData.compareTo(root.getData()) > 0 && root.getRight() != null)
+			return root.getRight().find(aData);
 		
 		return null;
 	}
 	
 	public BinaryTree findLeftMost() { //Etsii vasemman puoleisimman silmukan
-		return (root.left() != null) ? root.left().findLeftMost(): this;
+		return (root.getLeft() != null) ? root.getLeft().findLeftMost(): this;
 	}
 	
 	public void deleteNode(String aData) {//TODO: .getRoot().left() => .getLeft()
@@ -71,8 +85,8 @@ public class BinaryTree {
 	public int laskeKorkeus() {
 		int v = 0, o = 0;
 		
-		if(root.left() != null) v = laskeKorkeus(v);
-		if(root.right() != null) o = laskeKorkeus(o);
+		if(root.getLeft() != null) v = laskeKorkeus(v);
+		if(root.getRight() != null) o = laskeKorkeus(o);
 		
 		return (v >= o) ? v: o;
 	}
@@ -91,8 +105,8 @@ public class BinaryTree {
 	public int laskeKorkeus(int korkeus) {
 		int v = korkeus, o = korkeus;
 
-		if(root.left() != null) v = root.left().laskeKorkeus(++v);
-		if(root.right() != null) o = root.right().laskeKorkeus(++o);
+		if(root.getLeft() != null) v = root.getLeft().laskeKorkeus(++v);
+		if(root.getRight() != null) o = root.getRight().laskeKorkeus(++o);
 		
 		return (v >= o) ? v: o;
 	}
@@ -100,8 +114,8 @@ public class BinaryTree {
 	public void preOrder() {
 		if (root == null) return;
 		System.out.println(root.getData()+',');
-		if (root.left() != null)	root.left().preOrder();
-		if (root.right() != null) 	root.right().preOrder();
+		if (root.getLeft() != null)	root.getLeft().preOrder();
+		if (root.getRight() != null) root.getRight().preOrder();
 	}
 	
 	public Node getRoot() {
@@ -111,10 +125,10 @@ public class BinaryTree {
 		return root.getData();
 	}
 	public BinaryTree getRight() {
-		return root.right();
+		return root.getRight();
 	}
 	public BinaryTree getLeft() {
-		return root.left();
+		return root.getLeft();
 	}
 	
 	public void setRoot(Node root) {

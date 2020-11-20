@@ -1,35 +1,55 @@
 package btree;
 
+/**
+ * @author Boriss
+ *
+ */
+@SuppressWarnings("PMD.ShortClassName")
 public class Node {
+	/**
+	 */
 	private String data;
+	/**
+	 */
 	private BinaryTree left;
+	/**
+	 */
 	private BinaryTree right;
 
-	public Node(String value) {
-		data = new String(value);
-		left = right = null;
+	/**
+	 * @param value
+	 */
+	public Node(final String value) {
+		data = value;
+		left = null;
+		right = null;
 	}
-	public Node(String value, BinaryTree left, BinaryTree right) {
-		data = new String(value);
+	/**
+	 * @param value
+	 * @param left
+	 * @param right
+	 */
+	public Node(final String value, final BinaryTree left, final BinaryTree right) {
+		data = value;
 		this.left = left;
 		this.right = right;
 	}
 	public String getData() {
 		return data;
 	}
-	public BinaryTree left() {
+	public BinaryTree getLeft() {
 		return left;
 	}
-	public BinaryTree right() {
+	public BinaryTree getRight() {
 		return right;
 	}
-	public void setData(String data) {
+	public void setData(final String data) {
 		this.data = data;
 	}
-	public void setLeft(BinaryTree tree) {
+	public void setLeft(final BinaryTree tree) {
 		left = tree;
 	}
-	public void setRight(BinaryTree tree) {
+	public void setRight(final BinaryTree tree) {
 		right = tree;
 	}
 }

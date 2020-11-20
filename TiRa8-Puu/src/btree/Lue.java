@@ -32,7 +32,7 @@ Operaatiot ovat sitkeitä, ne VAATIVAT kelvollisen syötteen!
 /******************************************************************/
 
   public static String rivi() {
-    String arvo=null;
+    String arvo = null;
     boolean ok;
     do {
       try {
@@ -84,11 +84,13 @@ Operaatiot ovat sitkeitä, ne VAATIVAT kelvollisen syötteen!
 /*******************************************************************/
 
   public static char merkki() {
-    String rivi = rivi();
+    final String rivi = rivi();
+    char merkki;
     try {
-      return rivi.charAt(0);
+      merkki = rivi.charAt(0);
     } catch (Exception e) {
-      return ' ';
+      merkki = ' ';
     }
+    return merkki;
   }
 }

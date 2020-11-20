@@ -1,10 +1,19 @@
 package btree;
-
+/**
+ * 
+ * @author Boriss
+ *
+ */
+@SuppressWarnings("PMD.ShortClassName")
 public class Menu {
-	
-	public static void main(String[] args) {
+	/**
+	 * 
+	 * @param args
+	 */
+	public static void main(final String[] args) {
 		char select;
-		BinaryTree tree = new BinaryTree();
+		@SuppressWarnings("PMD.DataflowAnomalyAnalysis")
+		final BinaryTree tree = new BinaryTree();
 		String data;
 		
 		do {
@@ -14,7 +23,7 @@ public class Menu {
 			switch (select) {
 			case '1':
 				System.out.println("Anna uusi avain (merkkijono)");
-				data = new String(Lue.rivi());
+				data = Lue.rivi();
 				tree.insert(data);
 				break;
 			case '2':                           
@@ -39,6 +48,9 @@ public class Menu {
 				System.out.println("Anna silmukan avain (merkkijono)");
 				data = Lue.rivi();
 				System.out.println("Korkeus: " + tree.laskeKorkeus(data));
+				break;
+			default:
+				System.out.println("Komentoa ei löytynyt.");
 				break;
 			}
 		} while(select != '7');
